@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Demon Lord who reincarnated as a Regular Man</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ====== LOBBY ====== -->
+    <div id="lobby" style="display:flex;flex-direction:column;align-items:center;justify-content:center;position:fixed;z-index:99;left:0;top:0;width:100vw;height:100vh;background:#13142a;overflow:hidden;" class="overlay">
+      <!-- Video background -->
+      <video id="lobby-video-bg" autoplay loop muted playsinline
+        style="position:absolute;left:0;top:0;width:100vw;height:100vh;object-fit:cover;z-index:0;">
+        <source src="video/lobby_bg.mp4" type="video/mp4">
+        Browser tidak mendukung video background.
+      </video>
+      <!-- Konten lobby -->
+      <h1 style="color:#ffbe5c;font-size:2.7em;letter-spacing:2px;text-shadow:1px 3px 8px #000b;z-index:1;position:relative;">Demon Lord who reincarnated as a regular man</h1>
+      <button id="start-btn" style="padding:18px 56px;font-size:1.3em;background:#5544ec;color:#fff;border-radius:16px;border:none;cursor:pointer;box-shadow:0 4px 20px #0008;margin-top:38px;z-index:1;position:relative;">Mulai</button>
+      <div style="color:#eee;margin-top:28px;font-size:1em;opacity:.8;z-index:1;position:relative;">By Mahasiswa Universitas Dumai</div>
+    </div>
+
+    <div id="episode-menu" style="display:none;flex-direction:column;align-items:center;justify-content:center;position:fixed;z-index:98;left:0;top:0;width:100vw;height:100vh;background:#181933;">
+      <h2 style="color:#ffbe5c;margin-bottom:30px;">Pilih Episode</h2>
+      <div id="episode-select-buttons" style="display:flex;gap:16px;flex-wrap:wrap;"></div>
+      <button id="back-lobby" style="margin-top:40px;background:#5544ec;color:#fff;padding:12px 34px;font-size:1.2em;border-radius:12px;cursor:pointer;border:none;">Kembali ke Lobby</button>
+    </div>
+    
+    
+    <div id="vn-bg"></div>
+    <div id="vn-character"></div>
+    <div id="vn-ui">
+      <div id="vn-dialogue">
+        <div id="vn-name"></div>
+        <div id="vn-text"></div>
+      </div>
+      <div class="choices"></div>
+      <div id="vn-controls">
+        <button id="lang-btn">English</button>
+        <button id="save-btn">Save</button>
+        <button id="load-btn">Load</button>
+      </div>
+      <div id="epSelect"></div>
+    </div>
+    <audio id="bgm"></audio>
+    <audio id="lobby-bgm" src="audio/lobby_bgm.mp3" loop></audio>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA0zm9W-uKBFMGX3XE-myQSxL9gwTC75mc",
+        authDomain: "vn-project-f5a1f.firebaseapp.com",
+        projectId: "vn-project-f5a1f",
+        storageBucket: "vn-project-f5a1f.firebasestorage.app",
+        messagingSenderId: "494734788640",
+        appId: "1:494734788640:web:c449391e44562b32f45445",
+        measurementId: "G-D6KC8N690J"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      const auth = firebase.auth();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+  
+</html>

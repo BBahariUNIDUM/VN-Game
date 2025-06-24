@@ -1,0 +1,157 @@
+body {
+    background: #141e30;
+    margin: 0;
+    overflow: hidden;
+  }
+  #vn-bg {
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: #000;
+    z-index: 1;
+  }
+  #vn-bg img {
+    width: 100vw; height: 100vh; object-fit: cover;
+  }
+  #vn-character img {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60vh;
+    z-index: 2;
+    pointer-events: none;
+  }
+  #vn-ui {
+    position: fixed; left:0; right:0; bottom:0;
+    z-index: 5;
+    pointer-events: none;
+  }
+  #vn-dialogue {
+    width: 70vw;
+    margin: 0 auto 24px auto;
+    background: rgba(30,30,40,0.82);
+    border-radius: 24px;
+    padding: 24px 36px;
+    color: #eee;
+    font-size: 1.25rem;
+    min-height: 90px;
+    pointer-events: auto;
+    box-shadow: 0 8px 32px #0006;
+  }
+  #vn-name {
+    font-weight: bold;
+    color: #ffbe5c;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  .choices {
+    width: 70vw;
+    margin: 0 auto 28px auto;
+    display: flex; gap: 18px; flex-wrap: wrap;
+    justify-content: center;
+    pointer-events: auto;
+  }
+  .choices button {
+    background: #4462ee;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.18s;
+  }
+  .choices button:hover {
+    background: #273b8e;
+  }
+  #vn-controls {
+    width: 70vw;
+    margin: 0 auto 10px auto;
+    display: flex;
+    justify-content: right;
+    gap: 16px;
+    pointer-events: auto;
+  }
+  #vn-controls button {
+    background: #2226;
+    border: none;
+    color: #ccc;
+    padding: 6px 22px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #vn-controls button:hover {
+    background: #555b;
+  }
+  input[type="text"] {
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 14px;
+    width: 75%;
+    box-sizing: border-box;
+  }
+  #epSelect {
+    width: 70vw;
+    margin: 0 auto 0 auto;
+    display: flex;
+    gap: 8px;
+    pointer-events: auto;
+    justify-content: center;
+  }
+  #epSelect button {
+    font-size: 1rem;
+    background: #344;
+    color: #fff;
+    border-radius: 7px;
+    border: none;
+    padding: 7px 22px;
+    cursor: pointer;
+  }
+  #epSelect button:hover {
+    background: #557;
+  }
+  
+  #episode-select-buttons button.ep-btn {
+    background: #344;
+    color: #fff;
+    border-radius: 7px;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin: 8px;
+    transition: background 0.15s;
+  }
+  #episode-select-buttons button.ep-btn:hover {
+    background: #557;
+  }
+  
+  #lobby {
+    position: fixed;
+    z-index: 99;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  #lobby-video-bg {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+  }
+  #lobby .overlay {
+    position: absolute; left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(20,20,40,0.45); z-index: 0;
+  }
+  #lobby > *:not(#lobby-video-bg):not(.overlay) {
+    z-index: 1;
+    position: relative;
+  }
+  
