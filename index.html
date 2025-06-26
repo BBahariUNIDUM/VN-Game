@@ -20,6 +20,13 @@
       <div style="color:#eee;margin-top:28px;font-size:1em;opacity:.8;z-index:1;position:relative;">By Mahasiswa Universitas Dumai</div>
     </div>
 
+    <div id="name-input-panel" style="display:flex;flex-direction:column;align-items:center;justify-content:center;position:fixed;z-index:100;left:0;top:0;width:100vw;height:100vh;background:#171830;">
+  <h2 style="color:#ffbe5c;margin-bottom:30px;">Masukkan Nama Karaktermu</h2>
+  <input id="mc-name-input" type="text" maxlength="18" placeholder="Nama MC-mu" style="padding:12px;font-size:1.2em;border-radius:8px;border:none;width:320px;max-width:90%;text-align:center;">
+  <button id="set-mc-name-btn" style="margin-top:36px;background:#5544ec;color:#fff;padding:14px 38px;font-size:1.1em;border-radius:14px;cursor:pointer;border:none;">OK</button>
+</div>
+
+
     <div id="episode-menu" style="display:none;flex-direction:column;align-items:center;justify-content:center;position:fixed;z-index:98;left:0;top:0;width:100vw;height:100vh;background:#181933;">
       <h2 style="color:#ffbe5c;margin-bottom:30px;">Pilih Episode</h2>
       <div id="episode-select-buttons" style="display:flex;gap:16px;flex-wrap:wrap;"></div>
@@ -39,8 +46,9 @@
         <button id="lang-btn">English</button>
         <button id="save-btn">Save</button>
         <button id="load-btn">Load</button>
+        <button id="back-ep-btn">Episode Select</button>
       </div>
-      <div id="epSelect"></div>
+      <!-- <div id="epSelect"></div> -->
     </div>
     <audio id="bgm"></audio>
     <audio id="lobby-bgm" src="audio/lobby_bgm.mp3" loop></audio>
